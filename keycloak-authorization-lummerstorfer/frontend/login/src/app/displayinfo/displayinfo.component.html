@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1>User Information</h1>
+<div *ngIf="userinfo">
+  <p><strong>Username:</strong> {{ userinfo.name }}</p>
+  <p><strong> LDAP_ENTRY_DN:</strong> {{ userinfo.LDAP_ENTRY_DN }}</p>
+  <p><strong>email_verified:</strong> {{ userinfo.email_verified }}</p>
+  <p><strong>given_name:</strong> {{ userinfo.given_name }}</p>
+  <p><strong>preferred_username:</strong> {{ userinfo.preferred_username }}</p>
+  <p><strong>sub:</strong> {{ userinfo.sub }}</p>
+</div>
+</body>
+</html>

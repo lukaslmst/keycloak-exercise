@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+'prefix GCS ... Grade Controlling System
+
+left to right direction
+
+class Student {
+fname: String
+lname: String
+}
+class Class {
+classname: String
+room: String
+
+}
+class Subject
+class Teacher
+class Grading {
+desc: String
+}
+class Allocation {
+year: String
+}
+
+(Student,Class) ..  Allocation
+
+(Allocation, Subject) .. Subjectdistribution
+(Teacher, Subject) .. Teacherdistribution
+
+Subject -- Grading
+
+@enduml
